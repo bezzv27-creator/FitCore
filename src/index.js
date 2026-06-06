@@ -14,6 +14,11 @@ root.render(
 // ===== PWA SETUP =====
 // Aggancia manifest e icone (head non accessibile in questa struttura)
 const head = document.head;
+// Viewport — fa comportare l'app come mobile (no "sito desktop")
+const viewport = document.createElement("meta");
+viewport.name = "viewport";
+viewport.content = "width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover";
+head.appendChild(viewport);
 
 const manifestLink = document.createElement("link");
 manifestLink.rel = "manifest";
